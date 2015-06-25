@@ -37,7 +37,7 @@ namespace HermEsb
 			messageBus->Serialize(writerBus);
 
 			void *serializedMessage = (void*) sbMessageBus.GetString();
-			int serializedMessageLen = sbMessageBus.Size();
+			int serializedMessageLen = sbMessageBus.GetSize();
 			Bytef *zBuffer = NULL;
 
 			if(useCompression)
@@ -47,10 +47,10 @@ namespace HermEsb
 				defstream.zalloc = Z_NULL;
 				defstream.zfree = Z_NULL;
 				defstream.opaque = Z_NULL;
-				defstream.avail_in = sbMessageBus.Size(); 
+				defstream.avail_in = sbMessageBus.GetSize();
 				defstream.next_in = (Bytef *)sbMessageBus.GetString();
 
-				int zBufLen = (int) ceil(1.001 * sbMessageBus.Size()) + 12 + 6; 
+				int zBufLen = (int) ceil(1.001 * sbMessageBus.GetSize()) + 12 + 6;
 				zBuffer = (Bytef *)malloc( zBufLen );
 
 				defstream.avail_out = zBufLen;

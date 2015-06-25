@@ -1,0 +1,18 @@
+Requisitos
+~~~~~~~~~~
+
+Instalar Boost 1.51
+-------------------
+
+sudo apt-get install libboost-dev libboost1.55-dev
+
+
+Instalar rapidjson
+------------------
+sudo apt-get install rapidjson-dev
+
+Instalar librabbitmq1
+---------------------
+
+sudo apt-get install librabbitmq1 librabbitmq-dev
+

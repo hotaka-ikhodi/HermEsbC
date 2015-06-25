@@ -1,9 +1,9 @@
 
 #include "InputGateway.h"
 #include "BaseGateway.h"
-#include <boost\thread.hpp>
-#include <boost\thread\latch.hpp>
-#include <boost\interprocess\sync\interprocess_semaphore.hpp>
+#include <boost/thread.hpp>
+#include <boost/thread/latch.hpp>
+#include <boost/interprocess/sync/interprocess_semaphore.hpp>
 #include "../global.h"
 
 namespace HermEsb
